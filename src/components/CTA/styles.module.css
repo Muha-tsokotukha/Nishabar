@@ -115,4 +115,8 @@
     padding: 12px 32px;
     margin-top: 50px;
   }
+
+  .cta {
+    height: 500px;
+  }
 }
