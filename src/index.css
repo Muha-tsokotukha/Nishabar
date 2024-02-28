@@ -127,3 +127,7 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+
+html {
+  scroll-snap-type: y mandatory;
+}

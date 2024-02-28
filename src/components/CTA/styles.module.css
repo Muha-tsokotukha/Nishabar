@@ -8,17 +8,21 @@
 
   background-size: cover;
   background-position: top;
-  height: calc(100vh - 80px);
+  height: 100vh;
+
   color: white;
   text-align: center;
   overflow: hidden;
+
+  scroll-snap-align: start;
+  scroll-margin-top: 80px;
 }
 
 .cta_header {
   font-size: 64px;
   text-transform: uppercase;
   animation: moveInLeft 1s ease-out;
-  margin-top: 150px;
+  margin-top: 200px;
 }
 
 .cta_description {
