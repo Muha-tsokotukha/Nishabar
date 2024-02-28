@@ -1,7 +1,7 @@
 .value {
   height: 100vh;
-  scroll-snap-align: start;
-  scroll-margin-top: 30px;
+  /* scroll-snap-align: start; */
+  /* scroll-margin-top: 30px; */
 
   display: flex;
   align-items: center;

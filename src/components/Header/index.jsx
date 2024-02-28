@@ -13,7 +13,7 @@ export const Header = () => {
 
       <nav className={styles.header_links}>
         <a href="#whyus">Почему Nishabar</a>
-        <a href="#">Контакты</a>
+        <a href="#contacts">Контакты</a>
       </nav>
 
       <a href="#" className={styles.header_btn__demo}>

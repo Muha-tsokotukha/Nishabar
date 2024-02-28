@@ -1,5 +1,4 @@
-import { Header, CTA, ValueProposition } from "./components";
-import "./App.css";
+import { Header, CTA, ValueProposition, Footer } from "./components";
 
 export default function LandingPage() {
   return (
@@ -9,6 +8,7 @@ export default function LandingPage() {
         <CTA />
         <ValueProposition />
       </main>
+      <Footer />
     </>
   );
 }
