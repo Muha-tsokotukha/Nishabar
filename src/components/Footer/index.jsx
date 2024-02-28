@@ -18,7 +18,7 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/assets/telegram.png" alt="telegram link" />
+            <img src="../../assets/telegram.png" alt="telegram link" />
             Telegram
           </a>
         </div>

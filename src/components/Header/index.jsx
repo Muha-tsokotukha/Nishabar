@@ -4,7 +4,7 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <img
-        src="assets/Logo.png"
+        src="../../assets/Logo.png"
         alt="nishabar logo"
         width="64px"
         height="64px"
