@@ -105,4 +105,10 @@
   .cta_description {
     font-size: 16px;
   }
+
+  .cta_btn {
+    font-size: 16px;
+    padding: 12px 32px;
+    margin-top: 50px;
+  }
 }
