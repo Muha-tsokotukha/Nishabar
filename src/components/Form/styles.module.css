@@ -1,8 +1,9 @@
 .demo_form {
   margin: auto;
   margin-top: 64px;
-  width: 800px;
-  height: 500px;
+  max-width: 800px;
+  max-height: 500px;
+  padding: 16px;
 }
 
 .demo_form__container {

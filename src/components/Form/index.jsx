@@ -3,21 +3,23 @@ import { useForm, FormProvider } from "react-hook-form";
 import { Form } from "antd";
 import {
   DemoFormFooterButtons,
+  DemoFormResults,
   DemoFormStep1,
   DemoFormStep2,
   DemoFormStep3,
 } from "./libs";
 import styles from "./styles.module.css";
 
-export const DemoForm = () => {
-  const [step, setStep] = useState(1);
+export const DemoForm = ({ step, setStep }) => {
+  const [result, setResult] = useState("");
   const methods = useForm();
   const { watch } = methods;
 
   const onSubmit = () => {
     const data = watch();
+    setStep(-1);
 
-    console.log(data);
+    setResult(JSON.stringify(data));
   };
 
   return (
@@ -31,15 +33,17 @@ export const DemoForm = () => {
           ) : step === 3 ? (
             <DemoFormStep3 />
           ) : (
-            <>final</>
+            <DemoFormResults result={result} />
           )}
         </Form>
 
-        <DemoFormFooterButtons
-          setStep={setStep}
-          step={step}
-          onSubmit={onSubmit}
-        />
+        {step !== -1 && (
+          <DemoFormFooterButtons
+            setStep={setStep}
+            step={step}
+            onSubmit={onSubmit}
+          />
+        )}
       </FormProvider>
     </div>
   );

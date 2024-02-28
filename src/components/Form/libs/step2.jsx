@@ -15,6 +15,26 @@ export const DemoFormStep2 = () => {
           )}
         />
       </Form.Item>
+
+      <Form.Item label="Склад">
+        <Controller
+          control={control}
+          name="store"
+          render={({ field }) => (
+            <Input placeholder="Например 100 квадратных метров" {...field} />
+          )}
+        />
+      </Form.Item>
+
+      <Form.Item label="Ваши интересы и хобби">
+        <Controller
+          control={control}
+          name="hobbies"
+          render={({ field }) => (
+            <Input placeholder="Например спорт, электроника" {...field} />
+          )}
+        />
+      </Form.Item>
     </>
   );
 };
