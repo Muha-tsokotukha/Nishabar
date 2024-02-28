@@ -12,8 +12,7 @@ export const Header = () => {
       />
 
       <nav className={styles.header_links}>
-        <a href="#">Почему Nishabar</a>
-        <a href="#">Цены</a>
+        <a href="#whyus">Почему Nishabar</a>
         <a href="#">Контакты</a>
       </nav>
 
