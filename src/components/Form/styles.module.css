@@ -1,0 +1,10 @@
+.demo_form {
+  margin: auto;
+  margin-top: 64px;
+  width: 800px;
+  height: 500px;
+}
+
+.demo_form__container {
+  height: 220px;
+}
