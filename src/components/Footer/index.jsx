@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
 export const Footer = () => {
@@ -8,7 +9,7 @@ export const Footer = () => {
       <div className={styles.footer_content}>
         <div className={styles.footer_links}>
           <a href="#whyus">Почему Nishabar</a>
-          <a href="#">Демо</a>
+          <Link to="/demo">Демо</Link>
         </div>
 
         <div className={styles.footer_social}>

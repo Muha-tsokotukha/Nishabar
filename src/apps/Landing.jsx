@@ -1,6 +1,6 @@
-import { Header, CTA, ValueProposition, Footer } from "./components";
+import { Header, CTA, ValueProposition, Footer } from "../components";
 
-export default function LandingPage() {
+export const LandingPage = () => {
   return (
     <>
       <Header />
@@ -11,4 +11,4 @@ export default function LandingPage() {
       <Footer />
     </>
   );
-}
+};

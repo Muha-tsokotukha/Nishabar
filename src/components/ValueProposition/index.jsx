@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
 const valuePropositions = [
@@ -32,9 +33,9 @@ export const ValueProposition = () => {
         ))}
       </section>
 
-      <a href="#" className={styles.cta_btn}>
+      <Link to="/demo" className={styles.cta_btn}>
         Попробовать бесплатно
-      </a>
+      </Link>
     </section>
   );
 };

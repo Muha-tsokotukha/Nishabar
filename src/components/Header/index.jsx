@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
 export const Header = () => {
@@ -16,9 +17,9 @@ export const Header = () => {
         <a href="#contacts">Контакты</a>
       </nav>
 
-      <a href="#" className={styles.header_btn__demo}>
+      <Link to="/demo" className={styles.header_btn__demo}>
         Демо
-      </a>
+      </Link>
     </header>
   );
 };

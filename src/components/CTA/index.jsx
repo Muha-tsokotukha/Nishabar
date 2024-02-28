@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
 export const CTA = () => {
@@ -8,9 +9,9 @@ export const CTA = () => {
         уникальный инструмент анализа ниш рынка
       </h3>
 
-      <a href="#" className={styles.cta_btn}>
+      <Link to="/demo" className={styles.cta_btn}>
         Попробовать бесплатно
-      </a>
+      </Link>
     </section>
   );
 };
