@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import logo from "../../../assets/Logo.png";
 import styles from "./styles.module.css";
 
 export const Header = () => {
   return (
     <header className={styles.header}>
       <img
-        src="../../assets/Logo.png"
+        src={logo}
         alt="nishabar logo"
         width="64px"
         height="64px"

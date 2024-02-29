@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import telegramIcon from "../../../assets/telegram.png";
 import styles from "./styles.module.css";
 
 export const Footer = () => {
@@ -19,7 +20,7 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="../../assets/telegram.png" alt="telegram link" />
+            <img src={telegramIcon} alt="telegram link" />
             Telegram
           </a>
         </div>
