@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import { Form } from "antd";
+import { getNicheAndProductsFromAi } from "../../store";
 import {
   DemoFormFooterButtons,
   DemoFormResults,
@@ -11,15 +12,34 @@ import {
 import styles from "./styles.module.css";
 
 export const DemoForm = ({ step, setStep }) => {
+  const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState("");
   const methods = useForm();
   const { watch } = methods;
 
-  const onSubmit = () => {
-    const data = watch();
-    setStep(-1);
+  const onSubmit = async () => {
+    try {
+      setIsLoading(true);
+      const data = watch();
+      setStep(-1);
 
-    setResult(JSON.stringify(data));
+      const formattedString = Object.entries(data)
+        .map(([key, value]) => `${key}: ${value}`)
+        .join(", ");
+
+      const message = await getNicheAndProductsFromAi(`
+        Пользователь предоставил такие данные
+        ${formattedString}.
+        Исходя из этих ответов очень кратко предложи ниши рынка и конкретные товары к ним на русском языке.
+        не трать много токенов
+      `);
+
+      setResult(message);
+    } catch (error) {
+      console.error("Error occurred:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -33,7 +53,11 @@ export const DemoForm = ({ step, setStep }) => {
           ) : step === 3 ? (
             <DemoFormStep3 />
           ) : (
-            <DemoFormResults result={result} />
+            <DemoFormResults
+              result={result}
+              isLoading={isLoading}
+              setStep={setStep}
+            />
           )}
         </Form>
 
